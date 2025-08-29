@@ -1,4 +1,4 @@
-// src/routes/NewGuest.tsx
+
 import { useNavigate } from "react-router-dom";
 import { pb } from "../lib/pb";
 
@@ -20,7 +20,7 @@ export default function NewGuest() {
         </h1>
 
         <form onSubmit={onSubmit} className="space-y-5">
-          {/* First Name */}
+          
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               First Name
@@ -33,7 +33,7 @@ export default function NewGuest() {
             />
           </div>
 
-          {/* Last Name */}
+          
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               Last Name
@@ -46,7 +46,7 @@ export default function NewGuest() {
             />
           </div>
 
-          {/* Email */}
+         
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               Email
@@ -60,7 +60,7 @@ export default function NewGuest() {
             />
           </div>
 
-          {/* Phone */}
+         
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               Phone
@@ -72,7 +72,7 @@ export default function NewGuest() {
             />
           </div>
 
-          {/* Address */}
+          
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               Address
@@ -84,7 +84,7 @@ export default function NewGuest() {
             />
           </div>
 
-          {/* Date of Birth */}
+          
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               Date of Birth
@@ -96,7 +96,7 @@ export default function NewGuest() {
             />
           </div>
 
-          {/* Buttons */}
+          
           <div className="flex justify-end gap-3 pt-4">
             <button
               type="button"
