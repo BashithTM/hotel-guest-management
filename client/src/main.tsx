@@ -12,7 +12,7 @@ import EditGuest from "./routes/EditGuest";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,   // ✅ shared layout
+    element: <Layout />,   
     children: [
       { path: "/", element: <Home /> },
       { path: "/guests", element: <Guests /> },
