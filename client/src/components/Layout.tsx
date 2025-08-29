@@ -26,7 +26,7 @@ export default function Layout() {
         </nav>
       </header>
 
-      {/* Page content */}
+      
       <main className="flex-1 bg-gray-50">
         <Outlet />
       </main>
