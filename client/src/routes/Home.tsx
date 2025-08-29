@@ -20,6 +20,7 @@ export default function Home() {
             to="/guests/new"
             className="px-6 py-3 rounded-lg bg-green-600 text-white hover:bg-green-700 font-medium"
           >
+            
             Add Guest
           </Link>
         </div>
