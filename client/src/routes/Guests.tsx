@@ -1,4 +1,4 @@
-// src/routes/Guests.tsx
+
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { pb } from "../lib/pb";
@@ -33,7 +33,7 @@ export default function Guests() {
   return (
     <div className="min-h-screen bg-gray-100 px-4 py-8">
       <div className="max-w-6xl mx-auto">
-        {/* Header Card */}
+        
         <div className="bg-white rounded-xl shadow p-6 mb-6">
           <div className="flex flex-col sm:flex-row gap-4 sm:items-center sm:justify-between">
             <div>
@@ -53,7 +53,7 @@ export default function Guests() {
             </div>
           </div>
 
-          {/* Search */}
+          
           <div className="mt-5">
             <input
               value={q}
@@ -64,7 +64,7 @@ export default function Guests() {
           </div>
         </div>
 
-        {/* Table Card */}
+        
         <div className="bg-white rounded-xl shadow overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full">
@@ -119,7 +119,7 @@ export default function Guests() {
             </table>
           </div>
 
-          {/* Footer */}
+          
           <div className="flex items-center justify-between px-4 py-3 bg-gray-50">
             <Link to="/" className="text-indigo-600 hover:underline">
               ← Back to Home
