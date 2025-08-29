@@ -37,7 +37,7 @@ export default function EditGuest() {
         </h1>
 
         <form onSubmit={onSubmit} className="space-y-5">
-          {/* First Name */}
+          
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               First Name
@@ -50,7 +50,7 @@ export default function EditGuest() {
             />
           </div>
 
-          {/* Last Name */}
+          
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               Last Name
@@ -63,7 +63,7 @@ export default function EditGuest() {
             />
           </div>
 
-          {/* Email */}
+          
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               Email
@@ -77,7 +77,7 @@ export default function EditGuest() {
             />
           </div>
 
-          {/* Phone */}
+          
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               Phone
@@ -89,7 +89,7 @@ export default function EditGuest() {
             />
           </div>
 
-          {/* Address */}
+          
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               Address
