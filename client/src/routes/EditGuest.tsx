@@ -101,7 +101,7 @@ export default function EditGuest() {
             />
           </div>
 
-          {/* Date of Birth */}
+          
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-700">
               Date of Birth
