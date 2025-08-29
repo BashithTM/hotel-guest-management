@@ -1,77 +1,127 @@
-# Hotel Guest Management – Starter
+# 🏨 Hotel Guest Management
 
-A minimal, ready-to-run starter for the **Guest Management System** using **React + TypeScript + Vite + Tailwind** (client) and **PocketBase** (server).
+A simple hotel guest management app.
 
-## Project Structure
-```
-/hotel-guest-management
-  /server           # PocketBase backend files (binary not included)
-  /client           # React + TS + Vite frontend
-  README.md
-```
+- **Frontend:** React + Vite + TailwindCSS  
+- **Backend:** PocketBase (lightweight Go backend with REST + realtime)
+
+Repo: `https://github.com/BashithTM/hotel-guest-management`
 
 ---
 
-## 1) Backend (PocketBase)
+## ✨ Features
+- List, search, create, edit, and delete guests
+- Clean UI with Tailwind
+- Simple data model (`guests` collection)
 
-1. Download PocketBase for your OS: https://pocketbase.io/
-2. Place the binary inside `server/` and run:
+---
+
+## ✅ Prerequisites
+- **Node.js** 18+ and **npm**
+- **PocketBase** (download zip from pocketbase.io and unzip the binary)
+
+---
+
+## 🚀 Quick Start
+
+### 1) Backend — PocketBase
+1. Place the PocketBase binary in the project root (or `./backend/`).
+2. Start the server:
+
+   **Windows (PowerShell)**
+   ```powershell
+   .\pocketbase.exe serve
+   ```
+   **macOS/Linux**
    ```bash
-   cd server
    ./pocketbase serve
-   # Admin UI: http://127.0.0.1:8090/_/
    ```
 
-3. In the Admin UI:
-   - Create a collection **guests** with fields:
-     - `first_name` (text, required)
-     - `last_name`  (text, required)
-     - `email`      (email, required, unique)
-     - `phone`      (text)
-     - `address`    (text)
-     - `date_of_birth` (date)
-     - *Note:* `id` and `created` are auto-generated
-   - API Rules (for this assignment only): allow `list`, `view`, `create`, `update`, `delete` to **true**.
-   - Add 3–5 sample guest records.
+3. Open the **Admin UI**: `http://127.0.0.1:8090/_/`
 
-> Optionally, import `server/guests.pbschema.json` to pre-create the collection (Admin UI → Settings → Import collection).
+4. **Admin login (for grading)**
+   ```
+   Email:    mohammedbashith24@gmail.com
+   Password: @bashith2000
+   ```
+
+5. Create a **collection** named `guests` with fields:
+   - `first_name` — text (required)
+   - `last_name` — text (required)
+   - `email` — email (required)
+   - `phone` — text (optional)
+   - `address` — text (optional)
+   - `date_of_birth` — date (optional)
+
+> For demo/grading you can set List/View/Create/Update/Delete rules to `true`.
 
 ---
 
-## 2) Frontend (React + TS + Vite)
+### 2) Frontend — React app
+1. Create `client/.env`:
+   ```
+   VITE_PB_URL=http://127.0.0.1:8090
+   ```
+2. Install & run:
+   ```bash
+   cd client
+   npm install
+   npm run dev
+   ```
+   App: `http://localhost:5173`
 
-### Prerequisites
-- Node.js 18+ and npm
-
-### Setup & Run
+(Optional) Build:
 ```bash
+npm run build
+npm run preview
+```
+
+---
+
+## 📁 Structure
+```
+hotel-guest-management/
+├─ client/
+│  ├─ src/
+│  │  ├─ components/Layout.tsx
+│  │  ├─ lib/pb.ts
+│  │  ├─ routes/{Home,Guests,NewGuest,EditGuest}.tsx
+│  │  └─ main.tsx
+│  ├─ index.css
+│  └─ vite.config.ts
+├─ pocketbase(.exe)         # binary placed here or in ./backend
+├─ .gitignore
+├─ .gitattributes
+└─ README.md
+```
+
+---
+
+## 🔧 Useful Commands
+```bash
+# Frontend
 cd client
 npm install
-npm run dev   # http://localhost:5173
-```
+npm run dev       # http://localhost:5173
+npm run build
+npm run preview
 
-If your PocketBase is running on a different URL, set it via `.env`:
-```
-VITE_PB_URL=http://127.0.0.1:8090
-```
-
-### Routes
-- `/guests` – list + search + delete
-- `/guests/new` – create
-- `/guests/:id` – view/edit
-
----
-
-## 3) Git
-```bash
-cd /path/to/hotel-guest-management
-git init
-git add .
-git commit -m "init: pocketbase + react-ts + tailwind + basic CRUD"
+# Backend (project root)
+./pocketbase serve   # or .\pocketbase.exe serve on Windows
 ```
 
 ---
 
-## Notes
-- This starter intentionally skips auth per requirements.
-- Do **not** expose real credentials publicly in production repos.
+## 🧯 Troubleshooting
+- **Vite plugin error**:  
+  ```bash
+  cd client
+  npm i -D @vitejs/plugin-react vite
+  ```
+- **OneDrive path issues (Windows)**: Move the project to a non-OneDrive folder (e.g., `C:\Projects\hotel-guest-management`).
+- **Line-ending warnings**: `.gitattributes` contains `* text=auto eol=lf`.
+- **Push denied / wrong GitHub user**: In VS Code, sign in as `BashithTM` and remove old `github.com` entries from Windows **Credential Manager** if needed.
+
+---
+
+> **Security note:** These credentials are included only to satisfy grading. Change/remove them after submission.
